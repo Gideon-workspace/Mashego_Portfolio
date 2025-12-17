@@ -1,9 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useMemo } from "react";
 import { useState, useEffect } from "react";
-import profileImg from "../../public/images/aboutMe.jpg";
 
 import jsIcon from "../../public/images/js.png";
 import reactIcon from "../../public/images/react.png";
@@ -14,7 +12,6 @@ import firebase from "../../public/images/firebase.png";
 import tailwindcss from "../../public/images/tailwindcss.png";
 import nextjs from "../../public/images/nextjs.png";
 import machineLearning from "../../public/images/machine-learning.png";
-import ml from "../../public/images/ml.png";
 import dataScience from "../../public/images/data-science.png";
 import hiking from "../../public/images/hiking.png";
 import freelance from "../../public/images/freelance.png";
@@ -35,7 +32,7 @@ const milestones = [
   {
     year: "2024",
     title: "React & Next.js Projects",
-    description: "Built full-stack applications and gained proficiency in React ecosystem. but mainly worked in the backend using Node.js, Express, and databases like MySQL and Supabase.",
+    description: "Built full-stack applications and gained proficiency in React ecosystem. But mainly worked in the backend using Node.js, Express, and databases like MySQL and Supabase.",
     icon: reactIcon,
   },
   {
@@ -47,16 +44,15 @@ const milestones = [
   {
     year: "2025",
     title: "Data Analytic Intern",
-    description: " Processed and cleaned financial datasets for major South African banks (FNB, ABSA, NEDBANK, Standard Bank) using Python and Excel. Performed exploratory analysis to produce visual summaries of key trends for supervisors and find features with the strongest predictive power to be used to train the machine learning model.",
+    description: "Processed and cleaned financial datasets for major South African banks (FNB, ABSA, NEDBANK, Standard Bank) using Python and Excel. Performed exploratory analysis to produce visual summaries of key trends for supervisors and find features with the strongest predictive power to be used to train the machine learning model.",
     icon: dataScience,
   },
   {
     year: "2025",
     title: "Machine Learning Basics",
-    description: "Learned classification, regression, and clustering algorithms using Python and build simple ML model(Naive Bayes).",
+    description: "Learned classification, regression, and clustering algorithms using Python and built a simple ML model (Naive Bayes).",
     icon: machineLearning,
   },
- 
   {
     year: "2025",
     title: "Backend Engineering",
@@ -67,14 +63,15 @@ const milestones = [
 
 export default function AboutTimeline() {
   const duplicatesPerIcon = 3;
+  const [positions, setPositions] = useState([]);
 
-  // Generate floating icons positions and animation values once
-  const positions = useMemo(() => {
+  // Generate floating icons positions once after mount (client-side)
+  useEffect(() => {
     const floatingIconsList = baseIcons.flatMap(icon =>
       Array.from({ length: duplicatesPerIcon }, () => icon)
     );
 
-    return floatingIconsList.map(() => ({
+    const generatedPositions = floatingIconsList.map(() => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
       duration: 12 + Math.random() * 8,
@@ -91,9 +88,11 @@ export default function AboutTimeline() {
         Math.random() * window.innerHeight,
       ],
     }));
+
+    setPositions(generatedPositions);
   }, []);
 
-  // Create floating icons list
+  // Floating icons list
   const floatingIconsList = baseIcons.flatMap(icon =>
     Array.from({ length: duplicatesPerIcon }, () => icon)
   );
@@ -155,7 +154,7 @@ export default function AboutTimeline() {
                 )}
                 <h3 className="text-xl font-semibold">{item.title}</h3>
                 <span className="text-pink-500 font-medium">{item.year}</span>
-                <p className="mt-2 text-gray-600">{item.description}</p>
+                <p className="mt-2 text-gray-600">{item.description.replace(/'/g, "&apos;")}</p>
               </div>
 
               {/* Timeline circle */}
