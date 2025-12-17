@@ -89,7 +89,10 @@ export default function AboutTimeline() {
       ],
     }));
 
-    setPositions(generatedPositions);
+    // Wrap setState in requestAnimationFrame to avoid cascading render warning
+    requestAnimationFrame(() => {
+      setPositions(generatedPositions);
+    });
   }, []);
 
   // Floating icons list
