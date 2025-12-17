@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useMemo } from "react";
 import { useState, useEffect } from "react";
 import profileImg from "../../public/images/aboutMe.jpg";
 
@@ -65,16 +66,15 @@ const milestones = [
 ];
 
 export default function AboutTimeline() {
-  const [positions, setPositions] = useState([]);
+  const duplicatesPerIcon = 3;
 
-  // Generate initial positions once after mount
-  useEffect(() => {
-    const duplicatesPerIcon = 3; // Number of duplicates per icon
-    const floatingIcons = baseIcons.flatMap(icon =>
+  // Generate floating icons positions and animation values once
+  const positions = useMemo(() => {
+    const floatingIconsList = baseIcons.flatMap(icon =>
       Array.from({ length: duplicatesPerIcon }, () => icon)
     );
 
-    const generatePositions = floatingIcons.map(() => ({
+    return floatingIconsList.map(() => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
       duration: 12 + Math.random() * 8,
@@ -91,12 +91,9 @@ export default function AboutTimeline() {
         Math.random() * window.innerHeight,
       ],
     }));
-
-    setPositions(generatePositions);
   }, []);
 
-  // Use duplicated floatingIcons in the render
-  const duplicatesPerIcon = 3;
+  // Create floating icons list
   const floatingIconsList = baseIcons.flatMap(icon =>
     Array.from({ length: duplicatesPerIcon }, () => icon)
   );
