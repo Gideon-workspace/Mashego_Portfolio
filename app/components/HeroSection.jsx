@@ -20,7 +20,7 @@ export default function HeroSection() {
           </p>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-            Hello I'm <span className="text-pink-500 font-mono">Mashego Mabeloane</span>
+            Hello I&apos;m  <span className="text-pink-500 font-mono">Mashego Mabeloane</span>
           </h1>
 
           <p className="text-gray-300 text-base sm:text-lg mb-6 sm:mb-8">
