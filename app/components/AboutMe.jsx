@@ -67,6 +67,7 @@ const milestones = [
 export default function AboutTimeline() {
   const [positions, setPositions] = useState([]);
 
+  // Generate initial positions once after mount
   useEffect(() => {
     const duplicatesPerIcon = 3; // Number of duplicates per icon
     const floatingIcons = baseIcons.flatMap(icon =>
@@ -75,7 +76,20 @@ export default function AboutTimeline() {
 
     const generatePositions = floatingIcons.map(() => ({
       x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight, // spread across full vertical height
+      y: Math.random() * window.innerHeight,
+      duration: 12 + Math.random() * 8,
+      delay: Math.random() * 2,
+      rotate: [0, 15, -15, 0],
+      moveX: [
+        Math.random() * window.innerWidth,
+        Math.random() * window.innerWidth,
+        Math.random() * window.innerWidth,
+      ],
+      moveY: [
+        Math.random() * window.innerHeight,
+        Math.random() * window.innerHeight,
+        Math.random() * window.innerHeight,
+      ],
     }));
 
     setPositions(generatePositions);
@@ -88,7 +102,7 @@ export default function AboutTimeline() {
   );
 
   return (
-    <section id = "AboutMe" className="relative w-full bg-gradient-to-b from-blue-100 to-white py-20 overflow-hidden">
+    <section id="AboutMe" className="relative w-full bg-gradient-to-b from-blue-100 to-white py-20 overflow-hidden">
       {/* Decorative blobs */}
       <div className="absolute top-0 -left-30 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -z-10"></div>
       <div className="absolute bottom-0 -right-32 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -z-10"></div>
@@ -96,25 +110,23 @@ export default function AboutTimeline() {
       {/* Floating tech icons */}
       {positions.length > 0 &&
         floatingIconsList.map((icon, index) => {
-          const moveX = [Math.random() * window.innerWidth, Math.random() * window.innerWidth, Math.random() * window.innerWidth];
-          const moveY = [Math.random() * window.innerHeight, Math.random() * window.innerHeight, Math.random() * window.innerHeight];
-
+          const pos = positions[index];
           return (
             <motion.div
               key={index}
               className="absolute opacity-70 drop-shadow-lg"
-              initial={{ x: positions[index].x, y: positions[index].y }}
+              initial={{ x: pos.x, y: pos.y }}
               animate={{
-                x: [positions[index].x, ...moveX, positions[index].x],
-                y: [positions[index].y, ...moveY, positions[index].y],
-                rotate: [0, 15, -15, 0],
+                x: [pos.x, ...pos.moveX, pos.x],
+                y: [pos.y, ...pos.moveY, pos.y],
+                rotate: pos.rotate,
               }}
               transition={{
-                duration: 12 + Math.random() * 8,
+                duration: pos.duration,
                 repeat: Infinity,
                 repeatType: "loop",
                 ease: "easeInOut",
-                delay: Math.random() * 2,
+                delay: pos.delay,
               }}
             >
               <Image src={icon} width={30} height={30} alt="tech icon" />
@@ -134,9 +146,7 @@ export default function AboutTimeline() {
           {milestones.map((item, index) => (
             <motion.div
               key={index}
-              className={`flex w-full relative items-center ${
-                index % 2 === 0 ? "justify-start" : "justify-end"
-              }`}
+              className={`flex w-full relative items-center ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
