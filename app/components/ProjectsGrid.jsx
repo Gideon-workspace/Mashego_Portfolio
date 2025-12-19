@@ -3,7 +3,7 @@ import Image from "next/image";
 import hikingImg from "../../public/images/hiking.jpg";
 import freelanceImg from "../../public/images/freelance.jpg";
 import robot from "../../public/images/ml.jpg";
-import decisionTree from "../../public/images/decision-tree.png";
+import decisionTree from "../../public/images/145.png";
 import naiveBayes from "../../public/images/naive-bayes.png";
 import NaiveBayes from "../../public/images/NB2.png";
 import { motion } from "framer-motion";
@@ -56,6 +56,17 @@ const projects = [
       
     ],
     link: "https://nbviewer.org/github/Gideon-workspace/Naive-Bayes-Banknotes-and-Digit-Classification/blob/main/ML%20Lab%201.2%20-%20Naive%20Bayes%20Pt%202.ipynb",
+  },
+    {
+    title: "Machine Learning Model:Gradient Boosting Decision Tree Classifier",
+    description:
+      "This project uses Gradient Boosting, an ensemble machine learning algorithm, to classify students based on their exam scores and attendance percentages. The model predicts student performance categories, helping educators and academic systems better understand learning patterns and potential outcomes.This solution is being integrated into StuddyBuddy AI, a web application currently under development, to support data-driven academic insights.",
+    image: decisionTree,
+    tech: [
+      "Python",
+      
+    ],
+    link: "https://nbviewer.org/github/Gideon-workspace/Gradient-Boosting/blob/main/Student_Classification_Model.ipynb",
   },
   
 ];
