@@ -6,6 +6,7 @@ import robot from "../../public/images/ml.jpg";
 import decisionTree from "../../public/images/145.png";
 import naiveBayes from "../../public/images/naive-bayes.png";
 import NaiveBayes from "../../public/images/NB2.png";
+import studdy from "../../public/images/buddy.jpg";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -60,7 +61,7 @@ const projects = [
     {
     title: "Machine Learning Model:Gradient Boosting Decision Tree Classifier",
     description:
-      "This project uses Gradient Boosting, an ensemble machine learning algorithm, to classify students based on their exam scores and attendance percentages. The model predicts student performance categories, helping educators and academic systems better understand learning patterns and potential outcomes.This solution is being integrated into StuddyBuddy AI, a web application currently under development, to support data-driven academic insights.",
+      "This project uses Gradient Boosting, an ensemble machine learning algorithm, to classify students based on their exam scores and attendance percentages. The model predicts student performance categories, helping educators and academic systems better understand learning patterns and potential outcomes.This solution is being integrated into StuddyBuddy, a web application currently under development, to support data-driven academic insights.",
     image: decisionTree,
     tech: [
       "Python",
@@ -69,6 +70,23 @@ const projects = [
     link: "https://nbviewer.org/github/Gideon-workspace/Gradient-Boosting/blob/main/Student_Classification_Model.ipynb",
   },
   
+      {
+    title: "StuddyBuddy: AI-Powered Academic Assistant(Still Under development)",
+    description:
+      "StuddyBuddy is a full-stack web application that helps students track study activities, collaborate with peers, and receive personalized academic support using data-driven insights and LLMs. The platform combines a friendly social environment with smart analytics to optimize learning outcomes.",
+    image: studdy,
+    tech: [
+      "JavaScript",
+      "ReactJS",
+      "Node.js",
+      "Firebase",
+      "TailwindCSS",
+      "YouTube API",
+      "LLMs",
+      
+    ],
+    link: "https://studdybuddy-fe152.web.app/",
+  },
 ];
 
 export default function ProjectsDeck() {
