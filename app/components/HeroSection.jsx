@@ -30,7 +30,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
-              href="/files/Mashego_Mabeloane_resume.pdf" // ❗ IMPORTANT: Update this path to your actual CV file
+              href="/files/Mashego_Mabeloane_SE_resume.pdf" 
               download 
                className="inline-flex items-center justify-center 
                      px-8 py-3 border border-transparent text-base 

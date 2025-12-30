@@ -14,6 +14,7 @@ import nextjs from "../../public/images/nextjs.png";
 import machineLearning from "../../public/images/machine-learning.png";
 import dataScience from "../../public/images/data-science.png";
 import hiking from "../../public/images/hiking.png";
+import study from "../../public/images/study.png";
 import freelance from "../../public/images/freelance.png";
 
 // Base tech icons
@@ -32,7 +33,7 @@ const milestones = [
   {
     year: "2024",
     title: "React & Next.js Projects",
-    description: "Built full-stack applications and gained proficiency in React ecosystem. But mainly worked in the backend using Node.js, Express, and databases like MySQL and Supabase.",
+    description: "Built full-stack applications and gained proficiency in React ecosystem. But mainly worked in the backend using Node.js, Express, and databases like MySQL,Firebase and Supabase.",
     icon: reactIcon,
   },
   {
@@ -40,6 +41,12 @@ const milestones = [
     title: "Backend Engineering",
     description: "Built backend services for a freelancing platform (Freelancio) using JavaScript with Node.js, Express, and Supabase. Implemented secure user authentication, RESTful APIs, a real-time chat system, and job posting functionality.",
     icon: freelance,
+  },
+   {
+    year: "2025",
+    title: "Backend Engineering",
+    description: "Built backend services for a Trailo hiking logbook platform using JavaScript with Node.js, Express, and Supabase. Implemented RESTful APIs and wrote unit tests using Jest. Integrated weather forecasting via a third-party API (OpenWeather) and real-time distance and duration tracking using GeoJSON with the Google Maps API. Implemented data persistence using Chrome localStorage.",
+    icon: hiking,
   },
   {
     year: "2025",
@@ -56,8 +63,8 @@ const milestones = [
   {
     year: "2025",
     title: "Backend Engineering",
-    description: "Engineered the backend for a Hiking Logbook platform using JavaScript (Node.js, Express, and Supabase). Designed and implemented core features including hike activity logging, weather-informed trip planning, and real-time distance and duration tracking. Developed comprehensive automated test coverage using Jest and Supertest to ensure API reliability, performance, and correctness.",
-    icon: hiking,
+    description: "Engineered the backend for a StudyBuddy using JavaScript (Node.js, Express, and Supabase). Designed and deployed the Machine Learning Model that classify students looking at their grades and attendance percentages and integrated it in StuddyBuddy web app.Implemented secure user authentication using Firebase services.Planning to integrate real-time chat functionality using Firebase services,Curated Websites and Youtube video recommendation for concept enhancement based on the subjects students are currently studying that day. Planning to utilize LLM APIs to generate personalized study plans and quizzes for students based on their learning progress and areas of improvement.",
+    icon: study,
   },
 ];
 
