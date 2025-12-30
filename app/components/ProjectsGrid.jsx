@@ -77,6 +77,7 @@ const projects = [
     image: studdy,
     tech: [
       "JavaScript",
+      "Python",
       "ReactJS",
       "Node.js",
       "Firebase",
