@@ -12,9 +12,8 @@ function Footer() {
         
         {/* Optional: Add social links or quick navigation */}
         <div className="mt-2 text-gray-500 text-xs space-x-4">
-          <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-white transition-colors">GitHub</a>
-          <a href="#" className="hover:text-white transition-colors">Twitter</a>
+          <a href="https://www.linkedin.com/in/gideon-mabeloane" className="hover:text-white transition-colors">LinkedIn</a>
+          <a href="https://github.com/Gideon-workspace" className="hover:text-white transition-colors">GitHub</a>
         </div>
       </div>
     </footer>
