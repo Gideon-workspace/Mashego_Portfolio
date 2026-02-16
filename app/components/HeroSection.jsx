@@ -30,8 +30,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-gray-300 text-base sm:text-lg mb-8">
-            Software Developer building intelligent, real-world solutions with LLMs and AI.
-            Passionate about machine learning, automation, and scalable applications that solve real problems.
+            Wits Computer Science graduate passionate about machine learning and data-driven software solutions, building intelligent applications that solve real-world problems.
           </p>
 
           {/* CTA + SOCIALS */}
