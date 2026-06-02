@@ -7,6 +7,7 @@ import decisionTree from "../../public/images/145.png";
 import naiveBayes from "../../public/images/naive-bayes.png";
 import NaiveBayes from "../../public/images/NB2.png";
 import studdy from "../../public/images/buddy.jpg";
+import dnn from "../../public/images/DNN.png";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -43,9 +44,10 @@ const projects = [
     image: naiveBayes,
     tech: [
       "Python",
+      "Numpy",
       
     ],
-    link: "https://nbviewer.org/github/Gideon-workspace/Naive-Bayes-Classifying-Food-Reviews/blob/main/ML%20Lab%201.1%20-%20Naive%20Bayes%20Pt%201%20(4).ipynb?flush_cache=true",
+    link: "https://github.com/Gideon-workspace/Naive-Bayes-Classifying-Food-Reviews/blob/main/ML%20Lab%201.1%20-%20Naive%20Bayes%20Pt%201%20(4).ipynb",
   },
    {
     title: "Machine Learning Model:Naive Bayes-Digit and Banknotes Classification",
@@ -54,9 +56,12 @@ const projects = [
     image: NaiveBayes,
     tech: [
       "Python",
+      "Numpy",
+      "Pandas",
+      "Matplotlib",
       
     ],
-    link: "https://nbviewer.org/github/Gideon-workspace/Naive-Bayes-Banknotes-and-Digit-Classification/blob/main/ML%20Lab%201.2%20-%20Naive%20Bayes%20Pt%202.ipynb",
+    link: "https://github.com/Gideon-workspace/Naive-Bayes-Banknotes-and-Digit-Classification/blob/main/ML%20Lab%201.2%20-%20Naive%20Bayes%20Pt%202.ipynb",
   },
     {
     title: "Machine Learning Model:Gradient Boosting Decision Tree Classifier",
@@ -65,12 +70,34 @@ const projects = [
     image: decisionTree,
     tech: [
       "Python",
+      "Matplotlib",
+      "Pandas",
+      "Scikit-Learn",
+      "Seaborn",
+      "Scipy",
       
     ],
-    link: "https://nbviewer.org/github/Gideon-workspace/Gradient-Boosting/blob/main/Student_Classification_Model.ipynb",
-  },
-  
-      {
+    link: "https://github.com/Gideon-workspace/Gradient-Boosting/blob/main/Student_Classification_Model.ipynb",
+    
+    },
+
+
+    {
+  title: "Machine Learning Model: Random Forest & DNN Classifiers",
+  description: "This project implements and evaluates classical and deep learning ensemble models (Random Forest and a Dense Neural Network/MLP) to classify mushrooms as edible or poisonous based on physical traits. Features were optimized using Chi-Square statistical selection, reducing dimensionality while maintaining maximum model robustness. The system analyzes features such as odor and gill color to achieve flawless predictive classification, highlighting feature efficiency in real-world biological datasets.",
+  image: dnn,
+  tech: [
+    "Python",
+    "Keras",
+    "Scikit-Learn",
+    "Scipy",
+    "Pandas"
+   
+  ],
+  link: "https://github.com/Gideon-workspace/Multi-Layer-Perceptron/blob/main/Notebook/Project.ipynb"
+},
+    
+    {
     title: "StuddyBuddy: AI-Powered Academic Assistant(Still Under development)",
     description:
       "StuddyBuddy is a full-stack web application that helps students track study activities, collaborate with peers, and receive personalized academic support using data-driven insights and LLMs. The platform combines a friendly social environment with smart analytics to optimize learning outcomes.",
