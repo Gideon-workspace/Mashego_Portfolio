@@ -8,6 +8,7 @@ import naiveBayes from "../../public/images/naive-bayes.png";
 import NaiveBayes from "../../public/images/NB2.png";
 import studdy from "../../public/images/buddy.jpg";
 import dnn from "../../public/images/DNN.png";
+import surveillanceBot from "../../public/images/turtlebot.jpg";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -96,6 +97,23 @@ const projects = [
   ],
   link: "https://github.com/Gideon-workspace/Multi-Layer-Perceptron"
 },
+
+{
+  title: "SurveillanceBot: Manual Mapping & Navigation System",
+  description: "SurveillanceBot is an autonomous indoor robotic system built using a TurtleBot within a simulated environment. The pipeline seamlessly integrates SLAM for drift-free environment mapping, configuration space obstacle inflation using NumPy vector matrices, optimal pathfinding via a custom A* search algorithm, and precise trajectory tracking powered by a closed-loop Proportional (P) motion controller.",
+  image: surveillanceBot,
+  tech: [
+    "Python",
+    "ROS",
+    "Gazebo",
+    "NumPy",
+    "GMapping (SLAM)",
+    "A* Algorithm"
+  ],
+  "link": "https://github.com/Gideon-workspace/SurveillanceBot/tree/main"
+},
+
+
     
     {
     title: "StuddyBuddy: AI-Powered Academic Assistant(Still Under development)",
@@ -114,7 +132,7 @@ const projects = [
       
     ],
     link: "https://studdybuddy-fe152.web.app/",
-  },
+    },
 ];
 
 export default function ProjectsDeck() {
