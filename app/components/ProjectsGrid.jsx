@@ -94,7 +94,7 @@ const projects = [
     "Pandas"
    
   ],
-  link: "https://github.com/Gideon-workspace/Multi-Layer-Perceptron/blob/main/Notebook/Project.ipynb"
+  link: "https://github.com/Gideon-workspace/Multi-Layer-Perceptron"
 },
     
     {
