@@ -50,7 +50,7 @@ const milestones = [
   },
   {
     year: "2025",
-    title: "Data Analytic Intern",
+    title: "Quantitative Risk Analyst Intern",
     description: "Processed and cleaned financial datasets for major South African banks (FNB, ABSA, NEDBANK, Standard Bank) using Python and Excel. Performed exploratory analysis to produce visual summaries of key trends for supervisors and find features with the strongest predictive power to be used to train the machine learning model.",
     icon: dataScience,
   },
