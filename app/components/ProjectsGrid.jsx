@@ -8,6 +8,7 @@ import naiveBayes from "../../public/images/naive-bayes.png";
 import NaiveBayes from "../../public/images/NB2.png";
 import studdy from "../../public/images/buddy.jpg";
 import dnn from "../../public/images/DNN.png";
+import fuelLogbook from "../../public/images/data_analysis.jpg";
 import surveillanceBot from "../../public/images/turtlebot.jpg";
 import { motion } from "framer-motion";
 
@@ -133,6 +134,23 @@ const projects = [
     ],
     link: "https://studdybuddy-fe152.web.app/",
     },
+
+    {
+  title: "Fuel Logbook Analytics & EDA",
+  description: 
+    "A data science pipeline that performs cleaning, metric unit conversions, and statistical analysis on a global fuel logbook dataset. Features outlier detection, random forest feature importance modeling, and driver behavioral analysis.",
+  image: fuelLogbook, // Update this variable name to match your assets
+  tech: [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "Scikit-Learn",
+    "Jupyter"
+  ],
+  link: "https://github.com/Gideon-workspace/fuel-efficiency-analysis-eda", // Replace with your actual repo link
+}
 ];
 
 export default function ProjectsDeck() {
