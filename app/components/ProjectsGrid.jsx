@@ -36,7 +36,7 @@ const projects = [
       "Mapbox API",
       "OpenWeather API",
     ],
-    link: "https://hiking-logbook-fchkhdddb7hrghau.southafricanorth-01.azurewebsites.net/",
+    link: "https://hiking-logbook-mu.vercel.app/",
   },
   
      {
