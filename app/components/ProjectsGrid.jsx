@@ -2,7 +2,7 @@
 import Image from "next/image";
 import hikingImg from "../../public/images/hiking.jpg";
 import freelanceImg from "../../public/images/freelance.jpg";
-import robot from "../../public/images/ml.jpg";
+import noduleDetection from "../../public/images/nodules.png";
 import nycTaxi from "../../public/images/nyc-taxi.jpg";
 import decisionTree from "../../public/images/145.png";
 import naiveBayes from "../../public/images/naive-bayes.png";
@@ -185,6 +185,21 @@ const projects = [
     "Jupyter",
   ],
   link: "https://github.com/Gideon-workspace/nyc-taxi-data-analysis", // Replace with your actual repo link
+},
+{
+  title: "Content-Aware Downsampling for Pulmonary Nodule Detection",
+  description:
+    "A research project evaluating whether Local Importance-based Pooling (LIP), a content-aware downsampling method from natural image classification, can improve small pulmonary nodule detection in chest X-rays. Benchmarks LIP against standard pooling and strided downsampling across the NODE21 and JSRT datasets.",
+  image: noduleDetection, // Update this variable name to match your assets
+  tech: [
+    "Python",
+    "PyTorch",
+    "NumPy",
+    "OpenCV",
+    "Matplotlib",
+    "Jupyter",
+  ],
+  link: "https://github.com/Gideon-workspace/Small-Pulmonary-Nodule-Detection", // Replace with your actual repo link
 }
 
 ];
