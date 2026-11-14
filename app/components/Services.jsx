@@ -3,6 +3,7 @@ import Image from "next/image";
 import web from "../../public/images/web.png";
 import datacleaning from "../../public/images/data-cleaning.png";
 import ml from "../../public/images/ml.png";
+import interpretability from "../../public/images/llm.jpg";
 import backend from "../../public/images/backend.png";
 import { motion } from "framer-motion";
 
@@ -31,6 +32,12 @@ const services = [
       "Training and deploying machine learning models using Python.",
     image: ml,
   },
+  {
+  title: "AI Interpretability Research",
+  description:
+    "Investigating how transformer models learn and fail, using induction heads, attention circuit analysis, and activation patching to explain model behavior.",
+  image: interpretability, // Update this variable name to match your assets
+},
 ];
 
 export default function Services() {

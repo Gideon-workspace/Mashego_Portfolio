@@ -3,10 +3,12 @@ import Image from "next/image";
 import hikingImg from "../../public/images/hiking.jpg";
 import freelanceImg from "../../public/images/freelance.jpg";
 import robot from "../../public/images/ml.jpg";
+import nycTaxi from "../../public/images/nyc-taxi.jpg";
 import decisionTree from "../../public/images/145.png";
 import naiveBayes from "../../public/images/naive-bayes.png";
 import NaiveBayes from "../../public/images/NB2.png";
 import studdy from "../../public/images/buddy.jpg";
+import modelCollapse from "../../public/images/model_collapse.png";
 import dnn from "../../public/images/DNN.png";
 import fuelLogbook from "../../public/images/data_analysis.jpg";
 import surveillanceBot from "../../public/images/turtlebot.jpg";
@@ -135,7 +137,7 @@ const projects = [
     link: "https://studdybuddy-fe152.web.app/",
     },
 
-    {
+  {
   title: "Fuel Logbook Analytics & EDA",
   description: 
     "A data science pipeline that performs cleaning, metric unit conversions, and statistical analysis on a global fuel logbook dataset. Features outlier detection, random forest feature importance modeling, and driver behavioral analysis.",
@@ -150,7 +152,41 @@ const projects = [
     "Jupyter"
   ],
   link: "https://github.com/Gideon-workspace/fuel-efficiency-analysis-eda", // Replace with your actual repo link
+},
+{
+  title: "Model Collapse in Causal Transformers",
+  description:
+    "A mechanistic interpretability study of how training on self-generated data degrades causal transformers. Combines synthetic data generation and in-context learning experiments with analyses of induction heads, attention circuits, activation patching, and embedding geometry to trace how model collapse changes learned representations and performance.",
+  image: modelCollapse, // Update this variable name to match your assets
+  tech: [
+    "Python",
+    "PyTorch",
+    "NumPy",
+    "Matplotlib",
+    "Jupyter",
+  ],
+  link: "https://github.com/Gideon-workspace/model-collapse", // Replace with your actual repo link
+},
+{
+  title: "NYC Taxi Trips: Geospatial & Time-Series Analysis",
+  description:
+    "An end-to-end analysis of 1.5 million NYC taxi trips from 2016. Covers outlier removal, feature engineering (distance, speed, day of week), demand patterns by hour, weekday and holiday, and pickup heatmaps. Uses DBSCAN to find late-night and evening hotspots, models airport travel times to JFK and Newark, and compares PCA, t-SNE, and UMAP embeddings with density-based clustering to identify distinct types of trips.",
+  image: nycTaxi, // Update this variable name to match your assets
+  tech: [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "GeoPandas",
+    "Folium",
+    "Scikit-Learn",
+    "UMAP",
+    "Jupyter",
+  ],
+  link: "https://github.com/Gideon-workspace/nyc-taxi-data-analysis", // Replace with your actual repo link
 }
+
 ];
 
 export default function ProjectsDeck() {
